@@ -7,6 +7,8 @@ import {Pipe,PipeTransform} from "@angular/core"
 
 export class ConvertiGenderPipe implements PipeTransform{
     transform(value:String):String {
-        return (value=="male")? "maschio":"femmina";
+        (value=="male")?value="Maschile":"";
+        (value=="female")?value="Femminile":""
+        return value
     }
 }

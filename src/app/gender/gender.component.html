@@ -11,9 +11,9 @@
         <th>Count</th>
         <!-- {{"female" | ConvertiGenderPipe}}  ESEMPIO DI PIPE IN ./gender.transform.pipe.ts -->
         <tr  *ngFor="let schede of arr"(click)="removeData(schede.name)" >
-            <td  >{{(schede.name)?schede.name:""}}</td>
-            <td>{{(schede.gender=="male")?"Maschile":""}} {{(schede.gender=="female")?"Femminile":""}}</td>
-            <td>{{schede.probability}}{{(schede.probability)?"%":""}}</td>
+            <td  >{{schede.name | PrimaMaiuscola}}</td>
+            <td>{{schede.gender|ConvertiGenderPipe}}</td>
+            <td>{{schede.probability|ConvertiProb}}</td>
             <td>{{schede.count}}</td>
         </tr>
     </table>
