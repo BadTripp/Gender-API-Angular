@@ -11,7 +11,7 @@
         <tr>
             <td>{{scheda.name}}</td>
             <td>{{scheda.gender}}</td>
-            <td>{{scheda.probability}}</td>
+            <td>{{scheda.probability}}{{(scheda.probability)?"%":""}}</td>
             <td>{{scheda.count}}</td>
         </tr>
     </table>
