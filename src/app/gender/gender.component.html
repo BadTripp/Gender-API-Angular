@@ -1,0 +1,19 @@
+<h2 >{{titolo}}</h2>
+<div>
+    Inserisci Nome<input [(ngModel)]="nome" type="text">
+    <button (click)="trovaGenere()" >Ricerca</button>
+    <table>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Propbability</th>
+        <th>Count</th>
+
+        <tr>
+            <td>{{scheda.name}}</td>
+            <td>{{scheda.gender}}</td>
+            <td>{{scheda.probability}}</td>
+            <td>{{scheda.count}}</td>
+        </tr>
+    </table>
+</div>
+    
