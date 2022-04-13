@@ -8,11 +8,11 @@
         <th>Propbability</th>
         <th>Count</th>
 
-        <tr>
-            <td>{{scheda.name}}</td>
-            <td>{{scheda.gender}}</td>
-            <td>{{scheda.probability}}{{(scheda.probability)?"%":""}}</td>
-            <td>{{scheda.count}}</td>
+        <tr *ngFor="let schede of arr">
+            <td>{{(schede.name)?schede.name:""}}</td>
+            <td>{{(schede.gender=="male" && schede.gender)?"Maschile":"Femminile"}}</td>
+            <td>{{schede.probability}}{{(schede.probability)?"%":""}}</td>
+            <td>{{schede.count}}</td>
         </tr>
     </table>
 </div>
