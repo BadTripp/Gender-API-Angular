@@ -1,0 +1,7 @@
+<input [(ngModel)]="euro" type="text">
+<select [(ngModel)]="conversioneM">
+    <option value="EUR">EUR->BTC</option>
+    <option value="BTC">BTC->EUR</option>
+</select>
+<button (click)="converti()">Converti</button>
+<p>{{valoreBit}}{{(conversioneM=="EUR")?"₿":"€"}}</p>

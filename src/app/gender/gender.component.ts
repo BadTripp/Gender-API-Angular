@@ -23,7 +23,9 @@ export class GenderComponent{
         this.arr=this.arr.filter(item=>item.name != itemR)
         this.gs.saveData(this.arr)
     }
-
+    removeAll(){
+        this.arr=[]
+    }
     trovaGenere(){
 
         this.gs.getData(this.nome).subscribe({

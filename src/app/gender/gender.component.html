@@ -3,6 +3,8 @@
 <div>
     Inserisci Nome<input [(ngModel)]="nome" type="text">
     <button (click)="trovaGenere()" >Ricerca</button>
+    <button (click)="removeAll()" >Cancella Cronologia</button>
+    
     <p class="text-danger">{{error}}</p>
     <table  class="table table-borderless table-hover">
         <th>Name</th>

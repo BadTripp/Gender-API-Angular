@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from "@angular/common/http";
+import { ConvertitoreService } from './convertitore/convertitore.component.service';
 import { ConvertiGenderPipe } from './gender/gender.transform.pipe';
 import { FormsModule } from '@angular/forms';
+import { ConvertitoreComponent } from './convertitore/convertitore.component';
 import { PrimaMaiuscola } from './gender/prima.maiuscola.pipe';
 import { ConvertiProb } from './gender/prob.transform.pipe';
 import { GenderService } from './gender/gender.service';
@@ -12,6 +14,7 @@ import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
+    ConvertitoreComponent,
     PrimaMaiuscola,
     ConvertiProb,
     ConvertiGenderPipe,
@@ -24,7 +27,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [GenderService],
+  providers: [GenderService,ConvertitoreService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
