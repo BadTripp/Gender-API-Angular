@@ -23,6 +23,8 @@ export class GenderService{
         return (local)?JSON.parse(local):scheda;
     }
 
+    
+
     getData(nome:string):Observable<any>{
         let url="https://api.genderize.io?name="+nome
         return this.http.get<any>(url);

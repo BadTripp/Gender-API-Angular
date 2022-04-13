@@ -1,16 +1,18 @@
 <h2 >{{titolo}}</h2>
+<h3 class="text-warning">Clicca l'elemento della tabella per eliminarlo</h3>
 <div>
     Inserisci Nome<input [(ngModel)]="nome" type="text">
     <button (click)="trovaGenere()" >Ricerca</button>
-    <table>
+    <p>{{error}}</p>
+    <table  class="table">
         <th>Name</th>
         <th>Gender</th>
         <th>Propbability</th>
         <th>Count</th>
 
-        <tr *ngFor="let schede of arr">
-            <td>{{(schede.name)?schede.name:""}}</td>
-            <td>{{(schede.gender=="male" && schede.gender)?"Maschile":"Femminile"}}</td>
+        <tr *ngFor="let schede of arr" >
+            <td (click)="removeData(schede.name)" >{{(schede.name)?schede.name:""}}</td>
+            <td>{{(schede.gender=="male")?"Maschile":""}} {{(schede.gender=="female")?"Femminile":""}}</td>
             <td>{{schede.probability}}{{(schede.probability)?"%":""}}</td>
             <td>{{schede.count}}</td>
         </tr>
