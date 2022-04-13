@@ -1,7 +1,7 @@
-<input [(ngModel)]="euro" type="text">
-<select [(ngModel)]="conversioneM">
+<input class="input-group mb-3" [(ngModel)]="euro" type="text">
+<select class="input-group mb-3"  [(ngModel)]="conversioneM">
     <option value="EUR">EUR->BTC</option>
     <option value="BTC">BTC->EUR</option>
 </select>
-<button (click)="converti()">Converti</button>
-<p>{{valoreBit}}{{(conversioneM=="EUR")?"₿":"€"}}</p>
+<button (click)="converti()">Converti</button><br>
+<p class="badge badge-primary text-wrap"  style="width: 20rem;height: 2rem;font-size: large;">{{valoreBit}}{{(conversioneM=="EUR")?"₿":"€"}}</p>

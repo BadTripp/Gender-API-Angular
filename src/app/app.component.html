@@ -1,3 +1,4 @@
 <h1>{{title}}</h1>
-<!-- <app-gender></app-gender> -->
-<app-convertitore></app-convertitore>
+<button (click)="cambiaVisual()" >{{txtBtn}}</button>
+<app-gender *ngIf="!show"></app-gender>
+<app-convertitore *ngIf="show"></app-convertitore>

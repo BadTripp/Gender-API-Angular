@@ -25,6 +25,7 @@ export class GenderComponent{
     }
     removeAll(){
         this.arr=[]
+        localStorage.setItem("names", "{}");
     }
     trovaGenere(){
 
