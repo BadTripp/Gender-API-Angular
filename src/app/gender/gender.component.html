@@ -3,14 +3,14 @@
 <div>
     Inserisci Nome<input [(ngModel)]="nome" type="text">
     <button (click)="trovaGenere()" >Ricerca</button>
-    <p>{{error}}</p>
-    <table  class="table">
+    <p class="text-danger">{{error}}</p>
+    <table  class="table table-borderless table-hover">
         <th>Name</th>
         <th>Gender</th>
-        <th>Propbability</th>
+        <th>Probability</th>
         <th>Count</th>
-
-        <tr *ngFor="let schede of arr"(click)="removeData(schede.name)" >
+        <!-- {{"female" | ConvertiGenderPipe}}  ESEMPIO DI PIPE IN ./gender.transform.pipe.ts -->
+        <tr  *ngFor="let schede of arr"(click)="removeData(schede.name)" >
             <td  >{{(schede.name)?schede.name:""}}</td>
             <td>{{(schede.gender=="male")?"Maschile":""}} {{(schede.gender=="female")?"Femminile":""}}</td>
             <td>{{schede.probability}}{{(schede.probability)?"%":""}}</td>
