@@ -8,7 +8,6 @@ import {Pipe,PipeTransform} from "@angular/core"
 export class ConvertiProb implements PipeTransform{
     transform(value:any):any {
         
-
-        return (value)?value*100+"%":"";
+        return value*100+"%"
     }
 }
